@@ -1,0 +1,22 @@
+{
+    "name": "tailofequestria",
+    "title": "Tail of equestria",
+    "description": "Tail of equestria system for FoundryVTT !",
+    "version": "0.0.1",
+    "minimumCoreVersion": "0.9",
+    "compatibleCoreVersion": "0.9",
+    "templateVersion": 1,
+    "author": "Vharung",
+    "esmodules": ["module/tailofequestria.js"],
+    "styles": ["css/tailofequestria.css"],
+    "scripts": [],
+    "packs": [],
+    "languages": [],
+    "gridDistance": 1,
+    "gridUnits": "m",
+    "primaryTokenAttribute": "stamina",
+    "url": "",
+    "manifest": "",
+    "download": "",
+    "license": "LICENSE.txt"
+}

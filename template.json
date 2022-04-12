@@ -1,0 +1,51 @@
+{
+    "Actor": {
+        "types":[
+            "personnage",
+            "pnj",
+            "monstre"
+        ],
+        "templates":{
+            "stat":{
+                "stamina": {
+                  "value":0,
+                  "max":0
+                },
+                "body":"1d4",
+                "mind":"1d4",
+                "charm":"1d4",
+                "friendship":0
+            },            
+            "background":{
+                "background":"",
+                "race":"",
+                "level":1,
+                "elementofharmony":"",
+                "reputation":""
+            }
+        }
+    },
+    "Item": {
+        "types": [
+            "objet",
+            "talent",
+            "quirk"
+        ],
+        "objet": {
+            "description": "",
+            "valeur":0,
+            "quantite":1
+        },
+        "talent": {
+            "description": "",
+            "race":"",
+            "dice":"1d4",
+            "trait":"",
+            "updrad":""
+        },
+        "quirk": {
+            "description": "",
+            "source":""
+        }
+    }
+}
