@@ -10,8 +10,45 @@
     "esmodules": ["module/tailofequestria.js"],
     "styles": ["css/tailofequestria.css"],
     "scripts": [],
-    "packs": [],
-    "languages": [],
+    "packs": [{
+          "name": "defaut",
+          "label": "Défaut",
+          "system": "tailofequestria",
+          "path": "./pack/defaut.db",
+          "entity": "Item",
+          "type": "Item"
+        },
+        {
+          "name": "element-dharmonie",
+          "label": "Element d'harmonie",
+          "system": "tailofequestria",
+          "path": "./pack/objet.db",
+          "entity": "Item",
+          "type": "Item"
+        },
+        {
+          "name": "objet",
+          "label": "Objet",
+          "system": "tailofequestria",
+          "path": "./pack/pieces.db",
+          "entity": "Item",
+          "type": "Item"
+        },
+        {
+          "name": "talent",
+          "label": "Talent",
+          "system": "tailofequestria",
+          "path": "./pack/Planete.db",
+          "entity": "Item",
+          "type": "Item"
+        }
+    ],
+    "languages": [{
+        "lang": "fr",
+        "name": "Français",
+        "path": "lang/fr.json"
+      }
+    ],
     "gridDistance": 1,
     "gridUnits": "m",
     "primaryTokenAttribute": "stamina",
