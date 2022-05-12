@@ -1,0 +1,81 @@
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+	.contener{width: 1000px;height: 594px; display: block;}
+	header{background: #d5c6dc}
+	.col1{width: 470px;height: 40px; display: block;margin-top:5px;background: #f8c2da; padding: 10px;margin-top: 10px}
+	.col2{width: 490px;height: 564px; display: block;float: left;margin: 5px}
+	.col3{width: 33%;height: 50px; display: block;float: left;}
+	.col4{width: 66%;height: 50px; display: block;float: right;}
+	.col3 img{width: auto;height: 100px; display: block; margin: 0 auto}
+	.col3 input,.col4 input, input.stamina,input.staminamax, input.reduct{display: block; margin: 8px auto; background: none; border: none; border-bottom: solid 1px #705c8e}
+	.col3 input{width: 65%;}
+	.col4 input{width: 36%;}
+	.col6 {width: 240px;float: left; height: 200px;margin-top: 10px}
+	input.stamina,input.staminamax{float: left; width: 100px}
+	input.reduct{float: right; width: 100px}
+	h1 {margin-top: 0;font-family: 'Gloria Hallelujah', cursive;}
+	h1 input{width: 100%; background: none; border:none;color:#705c8e; padding: 10px;font-size: 1.2em; }
+	h2 {font-family: 'Gloria Hallelujah', cursive;color:#705c8e;font-size: 1.1em; float: left;margin-top: 0}
+	.col3 h2 {width: 20%;}
+	.col4 h2 {width: 54%;}
+	.col6 h2{text-align: center;width: 100%}
+	.stat{margin-top: 10px}
+	.stat h2 {width: 100%;text-align: center;margin-bottom: 2px;}
+	.stat .col3 {width:112px; margin: 5px;height: 112px}
+	.stat input{border-bottom:none;text-align: center;width: 100%;font-size: 2em;color:#705c8e;}
+	.amitie {border-radius: 61px}
+	.clear{clear:both;}
+</style>
+<div class="contener">
+	<div class="col2">
+		<header class="sheet-header flexcol" id="pj-titre" style="flex: 0 0 357px;">
+			<h1><input class="nomperso" name="name" type="text" value="{{actor.name}}" placeholder="Name" style="height:50px"/></h1>
+			<div class="flexrow">
+				<div class="col3" style="height: : 100px">
+					<img src="https://static-asset-delivery.hasbroapps.com/5d7b4adf060f3d11eb9e4b5f9308b71d76daa602/2b9edf3ba223521eefa26e5d168b9d54.png" data-edit="img" title="{{actor.name}}"/>
+				</div>
+				<div class="col3">
+					<h2>Race</h2>
+					<input name="data.race" type="text" value="{{data.data.race}}" placeholder="Race"/>
+				</div>
+				<div class="col3">
+					<h2>Level</h2>
+					<input name="data.ordre" type="text" value="{{data.data.ordre}}" placeholder="Profil"/>		
+				</div>
+				<div class="col4">
+					<h2>Element d'harmonie</h2>
+					<input name="data.ordre" type="text" value="{{data.data.ordre}}" placeholder="Profil"/>
+				</div>
+				<div class="clear"></div>
+			</div>	
+		</header>
+		<div class="col1">
+			<h2>Robustesse : </h2><input class="stamina" name="data.PV.value" type="text" value="{{data.data.PV.value}}" placeholder="1"/><span style="float:left;padding: 10px;color:#705c8e"> / </span>
+				<input class="staminamax" name="data.PV.max" type="text" value="{{data.data.PV.max}}" placeholder="1"/> <input class="reduct" name="data.PV.max" type="text" value="{{data.data.PV.max}}" placeholder="Réduction de dommage"/>
+		</div>
+		<div class="stat">
+			<div class="col3" style="background: #b8e3ec;margin-left: 0;">
+				<h2>Corps</h2><input class="body" name="data.PV.value" type="text" value="{{data.data.PV.value}}" placeholder="1"/>
+			</div>
+			<div class="col3" style="background: #ceb9d8">
+				<h2>Esprit</h2><input class="mind" name="data.PV.value" type="text" value="{{data.data.PV.value}}" placeholder="1"/>
+			</div>
+			<div class="col3" style="background: #fbd0e3">
+				<h2>Charme</h2><input class="charm" name="data.PV.value" type="text" value="{{data.data.PV.value}}" placeholder="1"/>
+			</div>
+			<div class="col3 amitie" style="background: #ef5fa4;">
+				<h2 style="color:#fff">Amitié</h2><input class="charm" name="data.PV.value" type="text" value="{{data.data.PV.value}}" placeholder="1" style="color:#fff"/>
+			</div>
+		</div>
+		<div class="col6" style="margin-right: 10px;background: #b5e3e9">
+			<h2>Talents</h2>
+		</div>
+		<div class="col6" style="background: #cebad6">
+			<h2>Défauts</h2>
+		</div>
+
+	</div>
+	<div class="col2" style="background: #f8c2da;padding:10px;width: 470px;">
+		<h2>Inventaire</h2>
+	</div>
+</div>

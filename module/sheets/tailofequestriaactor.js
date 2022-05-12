@@ -14,8 +14,8 @@ export class tailofequestriaActor extends Actor {
     const actorData = this.data;
     const data = actorData.data;
     const flags = actorData.flags;
-    //preparation dépendant du type de personnage (
-    if (actorData.type === 'personnage') this._preparePJData(actorData);
+  	//preparation dépendant du type de personnage (
+  	if (actorData.type === 'personnage') this._preparePJData(actorData);
   }
 
 

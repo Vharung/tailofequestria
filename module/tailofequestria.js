@@ -5,14 +5,14 @@ import { tailofequestriaItemSheet } from "./sheets/tailofequestriaitemsheet.js";
 
 
 Hooks.once("init", async function() {
-    console.log("Tail of Equestria | Initialisation du système Tail of Equestria");
-    CONFIG.Actor.documentClass = tailofequestriaActor;
+    console.log("Tail of equestria | Initialisation du système Tail of equestria");
+	CONFIG.Actor.documentClass = tailofequestriaActor;
     CONFIG.Item.documentClass = tailofequestriaItem;
 
-    /*CONFIG.Combat.initiative = {
-        formula: "1d6",
-        decimals: 2
-    };*/
+    CONFIG.Combat.initiative = {
+	    formula: "1d6",
+	    decimals: 2
+	};
 
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("tailofequestria", tailofequestriaItemSheet, { makeDefault: true });

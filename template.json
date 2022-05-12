@@ -8,20 +8,26 @@
         "templates":{
             "stat":{
                 "stamina": {
-                  "value":0,
-                  "max":0
+                  "value":1,
+                  "max":1
                 },
                 "body":"1d4",
                 "mind":"1d4",
-                "charm":"1d4",
-                "friendship":0
-            },            
+                "charm":"1d4"
+            }, 
+            "modif":{
+            	"body":0,
+                "mind":0,
+                "charm":0
+            },         
             "background":{
-                "background":"",
+                "histoire":"",
                 "race":"",
+                "element":"",
                 "level":1,
-                "elementofharmony":"",
-                "reputation":""
+                "apparance":"",
+                "frienship":0,
+                "reduction":""
             }
         }
     },
@@ -29,23 +35,27 @@
         "types": [
             "objet",
             "talent",
-            "quirk"
+            "faiblesse",
+            "harmony"
         ],
         "objet": {
             "description": "",
-            "valeur":0,
+            "valeur":10,
             "quantite":1
         },
         "talent": {
             "description": "",
             "race":"",
-            "dice":"1d4",
+            "dice":"",
             "trait":"",
-            "updrad":""
+            "upgrade":""
         },
-        "quirk": {
+        "faiblesse": {
             "description": "",
             "source":""
+        },
+        "harmony": {
+            "description": ""
         }
     }
 }

@@ -12,7 +12,7 @@ export class tailofequestriaItem extends Item {
           height: 400,
         });
     }
-  /** @override */
+	/** @override */
   prepareData() {
     // Prepare data for the item. Calling the super version of this executes
     // the following, in order: data reset (to clear active effects),
@@ -22,10 +22,12 @@ export class tailofequestriaItem extends Item {
     const itemData = this.data;
     const data = itemData.data;
     const flags = itemData.flags;
-    //preparation dépendant du type de personnage (
+  	//preparation dépendant du type de personnage (
+  	if (itemData.type === 'arme') this._prepareItemData(itemData);
     if (itemData.type === 'talent') this._prepareItemData(itemData);
-    if (itemData.type === 'quirk') this._prepareItemData(itemData);
+    if (itemData.type === 'faiblesse') this._prepareItemData(itemData);
     if (itemData.type === 'objet') this._prepareItemData(itemData);
+    if (itemData.type === 'magie') this._prepareItemData(itemData);
   }
 
 
