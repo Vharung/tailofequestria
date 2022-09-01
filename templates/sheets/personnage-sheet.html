@@ -10,11 +10,11 @@
 					</div>
 					<div class="col3">
 						<h2>Race</h2>
-						<input name="data.race" type="text" value="{{data.data.race}}" placeholder="Race"/>
+						<input name="system.race" type="text" value="{{data.system.race}}" placeholder="Race"/>
 					</div>
 					<div class="col3">
 						<h2>Level</h2>
-						<input name="data.level" type="text" value="{{data.data.level}}" placeholder="Level"/>		
+						<input name="system.level" type="text" value="{{data.system.level}}" placeholder="Level"/>		
 					</div>
 					<div class="col4">
 						<h2>Element d'harmonie</h2>
@@ -35,24 +35,24 @@
 				</div>	
 			</header>
 			<div class="col1">
-				<h2 style="padding-top: 6px;">Endurance : </h2><input class="stamina" name="data.stamina.value" type="text" value="{{data.data.stamina.value}}" placeholder="1"/><span style="float:left;padding: 10px;color:#705c8e"> / </span>
-					<input class="staminamax" name="data.stamina.max" type="text" value="{{data.data.stamina.max}}" placeholder="1"/> <input class="reduct" name="data.reduction" type="text" value="{{data.data.reduction}}" placeholder="Réduction de dommage"/>
+				<h2 style="padding-top: 6px;">Endurance : </h2><input class="stamina" name="system.stamina.value" type="text" value="{{data.system.stamina.value}}" placeholder="1"/><span style="float:left;padding: 10px;color:#705c8e"> / </span>
+					<input class="staminamax" name="system.stamina.max" type="text" value="{{data.system.stamina.max}}" placeholder="1"/> <input class="reduct" name="system.reduction" type="text" value="{{data.system.reduction}}" placeholder="Réduction de dommage"/>
 			</div>
 			<div class="stat">
 				<div class="col3" style="background: #b8e3ec;margin-left: 0;">
-					<h2><i class="fas fa-dice-d20 jetdedes" data-name="Corps"  data-dice="D4" data-attDice="{{data.data.data.body}}"></i> Corps</h2><input class="body" name="data.data.body" type="text" value="{{data.data.data.body}}" placeholder="1"/>
-					<input class="modifbody" name="data.modif.body" type="text" value="{{data.data.modif.body}}" placeholder="0" style="background: #eeeded;font-size: 0.9em;height: 20px;margin-top: -5px;width: 50px;"/>
+					<h2><i class="fas fa-dice-d20 jetdedes" data-name="Corps"  data-dice="D4" data-attDice="{{data.system.data.body}}"></i> Corps</h2><input class="body" name="system.system.body" type="text" value="{{data.system.data.body}}" placeholder="1"/>
+					<input class="modifbody" name="system.modif.body" type="text" value="{{data.system.modif.body}}" placeholder="0" style="background: #eeeded;font-size: 0.9em;height: 20px;margin-top: -5px;width: 50px;"/>
 				</div>
 				<div class="col3" style="background: #ceb9d8">
-					<h2><i class="fas fa-dice-d20 jetdedes" data-name="Esprit"  data-dice="D4" data-attDice="{{data.data.data.mind}}"></i> Esprit</h2><input class="mind" name="data.data.mind" type="text" value="{{data.data.data.mind}}" placeholder="1"/>
-					<input class="modifmind" name="data.modif.mind" type="text" value="{{data.data.modif.mind}}" placeholder="0" style="background: #eeeded;font-size: 0.9em;height: 20px;margin-top: -5px;width: 50px;"/>
+					<h2><i class="fas fa-dice-d20 jetdedes" data-name="Esprit"  data-dice="D4" data-attDice="{{data.system.data.mind}}"></i> Esprit</h2><input class="mind" name="system.system.mind" type="text" value="{{data.system.data.mind}}" placeholder="1"/>
+					<input class="modifmind" name="system.modif.mind" type="text" value="{{data.system.modif.mind}}" placeholder="0" style="background: #eeeded;font-size: 0.9em;height: 20px;margin-top: -5px;width: 50px;"/>
 				</div>
 				<div class="col3" style="background: #fbd0e3">
-					<h2><i class="fas fa-dice-d20 jetdedes" data-name="Charme"  data-dice="D4" data-attDice="{{data.data.data.charm}}"></i> Charme</h2><input class="charm" name="data.data.charm" type="text" value="{{data.data.data.charm}}" placeholder="1"/>
-					<input class="modifcharm" name="data.modif.charm" type="text" value="{{data.data.modif.charm}}" placeholder="0" style="background: #eeeded;font-size: 0.9em;height: 20px;margin-top: -5px;width: 50px;"/>
+					<h2><i class="fas fa-dice-d20 jetdedes" data-name="Charme"  data-dice="D4" data-attDice="{{data.system.data.charm}}"></i> Charme</h2><input class="charm" name="system.system.charm" type="text" value="{{data.system.data.charm}}" placeholder="1"/>
+					<input class="modifcharm" name="system.modif.charm" type="text" value="{{data.system.modif.charm}}" placeholder="0" style="background: #eeeded;font-size: 0.9em;height: 20px;margin-top: -5px;width: 50px;"/>
 				</div>
 				<div class="col3 amitie" style="background: #ef5fa4;">
-					<h2 style="color:#fff">Amitié</h2><input class="frienship" name="data.frienship" type="text" value="{{data.data.frienship}}" placeholder="1" style="color:#fff"/>
+					<h2 style="color:#fff">Amitié</h2><input class="frienship" name="system.frienship" type="text" value="{{data.system.frienship}}" placeholder="1" style="color:#fff"/>
 				</div>
 			</div>
 			<div class="col6 talent" style="margin-right: 10px;background: #b5e3e9">
@@ -70,12 +70,12 @@
 		                <li class="item" data-item-id="{{item._id}}">
 		                    <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
 		                    <div class="item-name">{{item.name}}</div>
-		                    <div class="item-race">{{item.data.race}}</div> 
-		                  <div class="item-dice">{{item.data.dice}}</div> 
-		                  <div class="item-trait">{{item.data.trait}}</div> 
-		                    <div class="item-description" title="{{item.data.description}}">{{item.data.description}}</div>
+		                    <div class="item-race">{{item.system.race}}</div> 
+		                  <div class="item-dice">{{item.system.dice}}</div> 
+		                  <div class="item-trait">{{item.system.trait}}</div> 
+		                    <div class="item-description" title="{{item.system.description}}">{{item.system.description}}</div>
 		                    <div class="item-controls">
-		                    	<i class="fas fa-dice-d20 jetdedes" data-name="{{item.name}}"  data-dice="1d" data-attDice="{{item.data.dice}}" data-trait="{{item.data.trait}}"></i>
+		                    	<i class="fas fa-dice-d20 jetdedes" data-name="{{item.name}}"  data-dice="1d" data-attDice="{{item.system.dice}}" data-trait="{{item.system.trait}}"></i>
 		                        <a class="item-control item-edit" title="Edit Sort"><i class="fas fa-edit"></i></a>
 		                        <a class="item-control item-delete" title="Delete Sort"><i class="fas fa-trash"></i></a>
 		                    </div>
@@ -97,7 +97,7 @@
 		                <li class="item" data-item-id="{{item._id}}">
 		                    <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
 		                    <div class="item-name">{{item.name}}</div>
-		                    <div class="item-description" title="{{item.data.description}}">{{item.data.description}}</div>
+		                    <div class="item-description" title="{{item.system.description}}">{{item.system.description}}</div>
 		                    <div class="item-controls">
 		                        <a class="item-control item-edit" title="Edit Sort"><i class="fas fa-edit"></i></a>
 		                        <a class="item-control item-delete" title="Delete Sort"><i class="fas fa-trash"></i></a>
@@ -112,7 +112,7 @@
 		<div class="col2" >
 			<div class="histoire" style="background: #b5e3e9;padding:10px;width: 470px;height: 141px">
 				<h2>Histoire</h2>
-				<textarea class="histoire" name="data.histoire" style="border: #705c8e 1px solid;color: #705c8e;resize: none;height: 80px;">{{data.data.histoire}}</textarea>
+				<textarea class="histoire" name="system.histoire" style="border: #705c8e 1px solid;color: #705c8e;resize: none;height: 80px;">{{data.system.histoire}}</textarea>
 			</div>
 			<div class="inventaire" style="background: #f8c2da;padding:10px;width: 470px;height: 428px;margin-top: 10px">
 				<h2>Inventaire</h2><div class="clear"></div>
@@ -130,9 +130,9 @@
 		                <li class="item" data-item-id="{{item._id}}">
 		                    <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
 		                    <div class="item-name2" title="{{item.name}}">{{item.name}}</div>
-		                    <div class="item-description2" title="{{item.data.description}}">{{item.data.description}}</div>
-		                    <div class="item-valeur">{{item.data.valeur}}</div>
-		                    <div class="item-qty">{{item.data.quantite}}</div>
+		                    <div class="item-description2" title="{{item.system.description}}">{{item.system.description}}</div>
+		                    <div class="item-valeur">{{item.system.valeur}}</div>
+		                    <div class="item-qty">{{item.system.quantite}}</div>
 		                    <div class="item-controls">
 		                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
 		                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>

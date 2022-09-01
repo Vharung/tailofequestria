@@ -2,7 +2,6 @@ export class tailofequestriaActorSheet extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
           classes: ["tailofequestria", "sheet", "actor"],
-          //template: "systems/tailofequestria/templates/actor/personnage-sheet.html",
           width: 1000,
           height: 640,
           tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
@@ -10,8 +9,8 @@ export class tailofequestriaActorSheet extends ActorSheet {
     }
 
     get template() {
-        console.log(`tailofequestria | Récupération du fichier html ${this.actor.data.type}-sheet.`);
-        return `systems/tailofequestria/templates/sheets/${this.actor.data.type}-sheet.html`;
+        console.log(`tailofequestria | Récupération du fichier html ${this.actor.type}-sheet.`);
+        return `systems/tailofequestria/templates/sheets/${this.actor.type}-sheet.html`;
     }
 
     getData(){
@@ -19,7 +18,7 @@ export class tailofequestriaActorSheet extends ActorSheet {
         var poidsactor='';
         data.dtypes = ["String", "Number", "Boolean"];
         console.log(data);        
-		if (this.actor.data.type == 'personnage' || this.actor.data.type == 'pnj' || this.actor.data.type == 'monstre') {
+		if (this.actor.type == 'personnage' || this.actor.type == 'pnj' || this.actor.type == 'monstre') {
 			this._prepareCharacterItems(data);
 		}
         console.log(data);
@@ -38,7 +37,7 @@ export class tailofequestriaActorSheet extends ActorSheet {
         // Iterate through items, allocating to containers
         // let totalWeight = 0;
         for (let i of sheetData.items) {
-          let item = i.data;
+          let item = i.items;
           i.img = i.img || DEFAULT_TOKEN;
           if (i.type === 'talent') {
             talent.push(i);
@@ -107,12 +106,12 @@ export class tailofequestriaActorSheet extends ActorSheet {
         let nbdes = event.target.dataset["attdice"];
         const name = event.target.dataset["name"];
         const trait = event.target.dataset["trait"];
-        const body =this.actor.data.data.body;
-        const mind =this.actor.data.data.mind;
-        const charm =this.actor.data.data.charm;
-        const modifbody =this.actor.data.data.modif.body;
-        const modifmind =this.actor.data.data.modif.mind;
-        const modifcharm =this.actor.data.data.modif.charm;
+        const body =this.actor.system.body;
+        const mind =this.actor.system.mind;
+        const charm =this.actor.system.charm;
+        const modifbody =this.actor.system.modif.body;
+        const modifmind =this.actor.system.modif.mind;
+        const modifcharm =this.actor.system.modif.charm;
         var listdes=['D4','D6','D8','D10','D12','D20','D20 + 1D4','D20 + 1D6','D20 + 1D8','D20 + D10','D20 + D12','2D20','2D20 + 1D6','2D20 + 1D8','2D20 + D10','2D20 + D12','3D20']
         var adddice="";
         var modif=0;

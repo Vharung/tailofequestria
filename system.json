@@ -1,12 +1,20 @@
 {
-    "name": "tailofequestria",
+    "id": "tailofequestria",
     "title": "Tail of equestria (Unofficiel)",
     "description": "Tail of equestria system for FoundryVTT !",
     "version": "0.0.5",
-    "minimumCoreVersion": "0.9",
-    "compatibleCoreVersion": "0.9",
+    "compatibility": {
+      "minimum": "10",
+      "verified": "10.283",
+      "maximum": "10"
+    },
     "templateVersion": 1,
-    "author": "Vharung",
+    "authors": [
+      {
+        "name": "Vharung",
+        "url": "https://foundryvtt.com"
+      }
+    ],
     "esmodules": ["module/tailofequestria.js"],
     "styles": ["css/tailofequestria.css"],
     "scripts": [],
@@ -15,7 +23,6 @@
           "label": "Défaut",
           "system": "tailofequestria",
           "path": "./pack/defaut.db",
-          "entity": "Item",
           "type": "Item"
         },
         {
@@ -23,7 +30,6 @@
           "label": "Element d'harmonie",
           "system": "tailofequestria",
           "path": "./pack/objet.db",
-          "entity": "Item",
           "type": "Item"
         },
         {
@@ -31,7 +37,6 @@
           "label": "Objet",
           "system": "tailofequestria",
           "path": "./pack/pieces.db",
-          "entity": "Item",
           "type": "Item"
         },
         {
@@ -39,7 +44,6 @@
           "label": "Talent",
           "system": "tailofequestria",
           "path": "./pack/Planete.db",
-          "entity": "Item",
           "type": "Item"
         }
     ],
@@ -55,5 +59,6 @@
     "url": "",
     "manifest": "",
     "download": "https://github.com/Vharung/tailofequestria",
-    "license": "LICENSE.txt"
+    "license": "LICENSE.txt",
+    "relationships.requires":""
 }

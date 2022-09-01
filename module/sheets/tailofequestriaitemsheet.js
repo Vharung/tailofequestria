@@ -1,8 +1,8 @@
 export class tailofequestriaItemSheet extends ItemSheet{
     get template(){
-        console.log(`tailofequestria | Récupération du fichier html ${this.item.data.type}-sheet.`);
+        console.log(`tailofequestria | Récupération du fichier html ${this.item.type}-sheet.`);
 
-        return `systems/tailofequestria/templates/sheets/${this.item.data.type}-sheet.html`;
+        return `systems/tailofequestria/templates/sheets/${this.item.type}-sheet.html`;
     }
 
     getData(){
