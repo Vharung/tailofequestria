@@ -1,4 +1,8 @@
-export class tailofequestriaItemSheet extends ItemSheet{
+/**
+ * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
+ * @extends {Item}
+ */
+ export class tailofequestriaItemSheet extends ItemSheet{
     get template(){
         console.log(`tailofequestria | Récupération du fichier html ${this.item.type}-sheet.`);
 

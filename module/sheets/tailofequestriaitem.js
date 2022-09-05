@@ -1,4 +1,8 @@
-export class tailofequestriaItem extends Item {
+/**
+ * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
+ * @extends {Item}
+ */
+ export class tailofequestriaItem extends Item {
   static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
           classes: ["tailofequestria", "sheet", "item"],
