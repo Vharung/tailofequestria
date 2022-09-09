@@ -14,7 +14,12 @@
 
     get template() {
         console.log(`tailofequestria | Récupération du fichier html ${this.actor.type}-sheet.`);
-        return `systems/tailofequestria/templates/sheets/${this.actor.type}-sheet.html`;
+        if(this.actor.type=='personnage' || this.actor.type =='pnj' || this.actor.type=='monstre'){
+            return `systems/tailofequestria/templates/sheets/personnage-sheet.html`; 
+       }else {
+            return `systems/tailofequestria/templates/sheets/${this.actor.type}-sheet.html`;
+       }
+        
     }
 
     getData(){
