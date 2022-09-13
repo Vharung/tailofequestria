@@ -3,33 +3,39 @@
 		<div class="col2">
 			{{!-- Sheet Header --}}
 			<header id="pj-titre">
-				<h1><input class="nomperso" name="name" type="text" value="{{actor.name}}" placeholder="Name" style="height:50px"/></h1>
+				
 				<div>
 					<div class="col3">
 						<img src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
 					</div>
-					<div class="col3">
-						<h2>Race</h2>
-						<input name="system.race" type="text" value="{{data.system.race}}" placeholder="Race"/>
-					</div>
-					<div class="col3">
-						<h2>Level</h2>
-						<input name="system.level" type="text" value="{{data.system.level}}" placeholder="Level"/>		
-					</div>
-					<div class="col4">
-						<h2>Element d'harmonie</h2>
-						{{#each actor.harmony as |item id|}}
-							<div class="item" data-item-id="{{item._id}}">
-			                    <div class="item-image" style="height: 40px;width:40px"><img src="{{item.img}}" title="{{item.name}}" style="height: 40px;width:40px"/></div>
-			                    <div class="item-name" style="width: 86px;padding-top: 10px;height: 40px;">{{item.name}}</div>
-			                    <div class="item-controls" style="padding-top: 10px;height: 40px;width: 20px;">
-			                        <a class="item-control item-delete" title="Delete Sort"><i class="fas fa-trash"></i></a>
-			                    </div>
-			                </div>
-		            	{{/each}}
+					<div style="float:left;width: 66%;displayblock">
+						<h1><input class="nomperso" name="name" type="text" value="{{actor.name}}" placeholder="Name" style="height:50px"/></h1>
+						<input name="system.level" type="text" value="{{data.system.level}}" placeholder="Level" style="float:left;margin-top: 5px;width: 20%;border: none;text-align: center;"/>
+						<div class="col3" style="width:54%">
+							{{#each actor.race as |item id|}}
+								<div class="item" data-item-id="{{item._id}}">
+				                    <div class="item-image" style="height: 40px;width:40px"><img src="{{item.img}}" title="{{item.name}}" style="height: 40px;width:40px"/></div>
+				                    <div class="item-name" style="width: 86px;padding-top: 10px;height: 40px;">{{item.name}}</div>
+				                    <div class="item-controls" style="padding-top: 10px;height: 40px;width: 20px;">
+				                        <a class="item-control item-delete" title="Delete Sort"><i class="fas fa-trash"></i></a>
+				                    </div>
+				                </div>
+			            	{{/each}}
+						</div>
+						<div class="col3" style="width: 46%;">						
+							{{#each actor.harmony as |item id|}}
+								<div class="item" data-item-id="{{item._id}}">
+				                    <div class="item-image" style="height: 40px;width:40px"><img src="{{item.img}}" title="{{item.name}}" style="height: 40px;width:40px"/></div>
+				                    <div class="item-name" style="width: 86px;padding-top: 10px;height: 40px;">{{item.name}}</div>
+				                    <div class="item-controls" style="padding-top: 10px;height: 40px;width: 20px;">
+				                        <a class="item-control item-delete" title="Delete Sort"><i class="fas fa-trash"></i></a>
+				                    </div>
+				                </div>
+			            	{{/each}}
 
 
 
+						</div>
 					</div>
 					<div class="clear"></div>
 				</div>	
@@ -41,15 +47,15 @@
 			</div>
 			<div class="stat">
 				<div class="col3" style="background: #b8e3ec;margin-left: 0;">
-					<h2><i class="fas fa-dice-d20 jetdedes" data-name="Corps"  data-dice="D4" data-attDice="{{data.system.data.body}}"></i> Corps</h2><input class="body" name="system.system.body" type="text" value="{{data.system.data.body}}" placeholder="1"/>
+					<h2><i class="fas fa-dice-d20 jetdedes" data-name="Corps"  data-dice="D4" data-attDice="{{data.system.system.body}}"></i> Corps</h2><input class="body" name="system.system.body" type="text" value="{{data.system.system.body}}" placeholder="1"/>
 					<input class="modifbody" name="system.modif.body" type="text" value="{{data.system.modif.body}}" placeholder="0" style="background: #eeeded;font-size: 0.9em;height: 20px;margin-top: -5px;width: 50px;"/>
 				</div>
 				<div class="col3" style="background: #ceb9d8">
-					<h2><i class="fas fa-dice-d20 jetdedes" data-name="Esprit"  data-dice="D4" data-attDice="{{data.system.data.mind}}"></i> Esprit</h2><input class="mind" name="system.system.mind" type="text" value="{{data.system.data.mind}}" placeholder="1"/>
+					<h2><i class="fas fa-dice-d20 jetdedes" data-name="Esprit"  data-dice="D4" data-attDice="{{data.system.system.mind}}"></i> Esprit</h2><input class="mind" name="system.system.mind" type="text" value="{{data.system.system.mind}}" placeholder="1"/>
 					<input class="modifmind" name="system.modif.mind" type="text" value="{{data.system.modif.mind}}" placeholder="0" style="background: #eeeded;font-size: 0.9em;height: 20px;margin-top: -5px;width: 50px;"/>
 				</div>
 				<div class="col3" style="background: #fbd0e3">
-					<h2><i class="fas fa-dice-d20 jetdedes" data-name="Charme"  data-dice="D4" data-attDice="{{data.system.data.charm}}"></i> Charme</h2><input class="charm" name="system.system.charm" type="text" value="{{data.system.data.charm}}" placeholder="1"/>
+					<h2><i class="fas fa-dice-d20 jetdedes" data-name="Charme"  data-dice="D4" data-attDice="{{data.system.system.charm}}"></i> Charme</h2><input class="charm" name="system.system.charm" type="text" value="{{data.system.system.charm}}" placeholder="1"/>
 					<input class="modifcharm" name="system.modif.charm" type="text" value="{{data.system.modif.charm}}" placeholder="0" style="background: #eeeded;font-size: 0.9em;height: 20px;margin-top: -5px;width: 50px;"/>
 				</div>
 				<div class="col3 amitie" style="background: #ef5fa4;">

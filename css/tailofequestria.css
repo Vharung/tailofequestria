@@ -1,24 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
-.tailofequestria .window-content,.window-app .window-content {background-image: none;}
 .tailofequestria .contener{width: 1000px;height: 594px; display: block;}
-.tailofequestria header{background: #d5c6dc;padding-bottom: 10px;color: #705c8e;}
-#sidebar,.document{background: #f8c2da;color: #705c8e;}
+.tailofequestria header{background: #d5c6dc;color: #705c8e;}
+#sidebar,.document,.window-app .window-content{background: #f8c2da;color: #705c8e;}
 #sidebar header{background: #d5c6dc}
 #sidebar .compendium-footer{color: #ef5fa4;}
+.tailofequestria.window-app .window-content {background: none;}
+.chat-message{background: #d5c6dc;color: #705c8e;}
 .dialog-content{background: #f8c2da;padding: 5px;color: #705c8e;}
 .dialog .dialog-buttons button.default{background: #ef5fa4;color: #fff;border: none;}
 .tailofequestria .col10{width: 490px;height: 54px; display: block;margin-top:5px; padding: 10px;margin-top: 10px;background: #ceb9d8;}
 .tailofequestria .col2{width: 490px;height: 564px; display: block;float: left;margin: 5px}
 .tailofequestria .col3{width: 33%;height: 50px; display: block;float: left;}
 .tailofequestria .col4{width: 66%;height: 50px; display: block;float: right;}
-.tailofequestria .col3 img{width: auto;height: 100px; display: block; margin: 0 auto;border: none;margin-bottom: 10px}
+.tailofequestria .col3 img{width: auto;height: 113px; display: block; margin: 0 auto;border: none;margin-bottom: 10px}
 .tailofequestria .col3 input,.col4 input, input.stamina,input.staminamax, input.reduct{display: block; margin: 8px auto; background: none; border: none; border-bottom: solid 1px #705c8e}
 .tailofequestria .col3 input{width: 65%;}
 .tailofequestria .col4 input{width: 36%;}
-.tailofequestria .col6 {width: 240px;float: left; height: 200px;margin-top: 10px; padding: 10px;overflow: auto;}
+.tailofequestria .col6 {width: 240px;float: left; height: 259px;margin-top: 10px; padding: 10px;overflow: auto;}
 .tailofequestria input.stamina,input.staminamax{float: left; width: 100px}
 .tailofequestria input.reduct{float: right; width: 100px}
-.tailofequestria h1 {margin-top: 0;font-family: 'Gloria Hallelujah', cursive;}
+.tailofequestria h1 {margin-top: 0;font-family: 'Gloria Hallelujah', cursive;float: left;width: 80%;}
 .tailofequestria h1,.tailofequestria h2{border-bottom: none}
 .tailofequestria h1 input{width: 100%; background: none; border:none;color:#705c8e; padding: 10px;font-size: 1.2em; }
 .tailofequestria h2 {font-family: 'Gloria Hallelujah', cursive;color:#705c8e;font-size: 1em; float: left;margin-top: 0}

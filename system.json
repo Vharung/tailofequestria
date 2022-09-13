@@ -43,8 +43,31 @@
           "name": "talent",
           "label": "Talent",
           "system": "tailofequestria",
-          "path": "./pack/Planete.db",
+          "path": "./pack/talent.db",
           "type": "Item"
+        },
+        {
+          "name": "race",
+          "label": "Race",
+          "system": "tailofequestria",
+          "path": "./pack/race.db",
+          "type": "Item"
+        },
+        {
+          "name": "regles",
+          "label": "Régles",
+          "type": "JournalEntry",
+          "path": "./pack/regle-du-jeu.db",
+          "system": "liber",
+          "private": false
+        },
+        {
+          "name": "monstre",
+          "label": "Monstres",
+          "system": "liber",
+          "path": "./pack/monstre.db",
+          "type": "Actor",
+          "private": true
         }
     ],
     "languages": [{

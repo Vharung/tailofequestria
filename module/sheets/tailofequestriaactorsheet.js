@@ -42,6 +42,7 @@
         const faiblesse = [];
         const talent = [];
         const harmony =[];
+        const race =[];
         
         // Iterate through items, allocating to containers
         // let totalWeight = 0;
@@ -60,6 +61,9 @@
           else if (i.type === 'harmony') {
             harmony.push(i);
           }
+          else if (i.type === 'race') {
+            race.push(i);
+          }
         }
 
         // Assign and return
@@ -67,6 +71,7 @@
         actorData.talent = talent;
         actorData.faiblesse = faiblesse;
         actorData.harmony = harmony;
+        actorData.race = race;
     }
 
 
