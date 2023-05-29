@@ -75,6 +75,7 @@
         "path": "lang/fr.json"
       }
     ],
+    "background": "systems/tailofequestria/assets/accueil.jpg",
     "gridDistance": 1,
     "gridUnits": "m",
     "primaryTokenAttribute": "stamina",
