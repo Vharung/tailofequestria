@@ -2,7 +2,7 @@
     "id": "tailofequestria",
     "title": "Tail of equestria (Unofficiel)",
     "description": "Tail of equestria system for FoundryVTT !",
-    "version": "0.2",
+    "version": "0.21",
     "compatibility": {
       "minimum": "10",
       "verified": "10.288",
@@ -58,8 +58,7 @@
           "label": "Régles",
           "type": "JournalEntry",
           "path": "./pack/regle-du-jeu.db",
-          "system": "liber",
-          "private": false
+          "system": "liber"
         },
         {
           "name": "monstre",
@@ -67,7 +66,7 @@
           "system": "liber",
           "path": "./pack/monstre.db",
           "type": "Actor",
-          "private": true
+          "visibility": "trusted"
         }
     ],
     "languages": [{
