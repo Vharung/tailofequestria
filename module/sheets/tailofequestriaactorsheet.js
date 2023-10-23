@@ -186,7 +186,7 @@
         const texte = "Jet de " + name + " : " +jetdeDesFormule +succes;
         //roll.roll().toMessage({
         roll.toMessage({
-            speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+            speaker: ChatMessage.getSpeaker({ actor: this }),
             flavor: texte
         });
     }
