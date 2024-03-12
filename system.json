@@ -23,6 +23,7 @@
           "label": "Défaut",
           "system": "tailofequestria",
           "path": "./pack/defaut.db",
+          "visibility": "trusted",
           "ownership": {
             "PLAYER": "LIMITED",
             "ASSISTANT": "OWNER"
@@ -34,6 +35,7 @@
           "label": "Element d'harmonie",
           "system": "tailofequestria",
           "path": "./pack/objet.db",
+          "visibility": "trusted",
           "ownership": {
             "PLAYER": "LIMITED",
             "ASSISTANT": "OWNER"
@@ -45,6 +47,7 @@
           "label": "Objet",
           "system": "tailofequestria",
           "path": "./pack/pieces.db",
+          "visibility": "trusted",
           "ownership": {
             "PLAYER": "LIMITED",
             "ASSISTANT": "OWNER"
@@ -56,6 +59,7 @@
           "label": "Talent",
           "system": "tailofequestria",
           "path": "./pack/talent.db",
+          "visibility": "trusted",
           "ownership": {
             "PLAYER": "LIMITED",
             "ASSISTANT": "OWNER"
@@ -67,6 +71,7 @@
           "label": "Race",
           "system": "tailofequestria",
           "path": "./pack/race.db",
+          "visibility": "trusted",
           "ownership": {
             "PLAYER": "LIMITED",
             "ASSISTANT": "OWNER"
@@ -78,6 +83,7 @@
           "label": "Régles",
           "type": "JournalEntry",
           "path": "./pack/regle-du-jeu.db",
+          "visibility": "trusted",
           "ownership": {
             "PLAYER": "LIMITED",
             "ASSISTANT": "OWNER"
@@ -90,6 +96,7 @@
           "system": "liber",
           "path": "./pack/monstre.db",
           "type": "Actor",
+          "visibility": "trusted",
           "ownership": {
             "PLAYER": "LIMITED",
             "ASSISTANT": "OWNER"
