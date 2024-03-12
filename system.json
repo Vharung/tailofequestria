@@ -2,7 +2,7 @@
     "id": "tailofequestria",
     "title": "Tail of equestria (Unofficiel)",
     "description": "Tail of equestria system for FoundryVTT !",
-    "version": "0.21",
+    "version": "0.22",
     "compatibility": {
       "minimum": "10",
       "verified": "11.299",
@@ -23,6 +23,10 @@
           "label": "Défaut",
           "system": "tailofequestria",
           "path": "./pack/defaut.db",
+          "ownership": {
+            "PLAYER": "LIMITED",
+            "ASSISTANT": "OWNER"
+          },
           "type": "Item"
         },
         {
@@ -30,6 +34,10 @@
           "label": "Element d'harmonie",
           "system": "tailofequestria",
           "path": "./pack/objet.db",
+          "ownership": {
+            "PLAYER": "LIMITED",
+            "ASSISTANT": "OWNER"
+          },
           "type": "Item"
         },
         {
@@ -37,6 +45,10 @@
           "label": "Objet",
           "system": "tailofequestria",
           "path": "./pack/pieces.db",
+          "ownership": {
+            "PLAYER": "LIMITED",
+            "ASSISTANT": "OWNER"
+          },
           "type": "Item"
         },
         {
@@ -44,6 +56,10 @@
           "label": "Talent",
           "system": "tailofequestria",
           "path": "./pack/talent.db",
+          "ownership": {
+            "PLAYER": "LIMITED",
+            "ASSISTANT": "OWNER"
+          },
           "type": "Item"
         },
         {
@@ -51,6 +67,10 @@
           "label": "Race",
           "system": "tailofequestria",
           "path": "./pack/race.db",
+          "ownership": {
+            "PLAYER": "LIMITED",
+            "ASSISTANT": "OWNER"
+          },
           "type": "Item"
         },
         {
@@ -58,6 +78,10 @@
           "label": "Régles",
           "type": "JournalEntry",
           "path": "./pack/regle-du-jeu.db",
+          "ownership": {
+            "PLAYER": "LIMITED",
+            "ASSISTANT": "OWNER"
+          },
           "system": "liber"
         },
         {
@@ -66,6 +90,10 @@
           "system": "liber",
           "path": "./pack/monstre.db",
           "type": "Actor",
+          "ownership": {
+            "PLAYER": "LIMITED",
+            "ASSISTANT": "OWNER"
+          },
           "visibility": "trusted"
         }
     ],
