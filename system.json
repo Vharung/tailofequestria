@@ -2,13 +2,12 @@
     "id": "tailofequestria",
     "title": "Tail of equestria (Unofficiel)",
     "description": "Tail of equestria system for FoundryVTT !",
-    "version": "0.22",
+    "version": "0.23",
     "compatibility": {
-      "minimum": "10",
-      "verified": "11.299",
-      "maximum": "11"
+      "minimum": "12",
+      "verified": "12.331",
+      "maximum": "12.999"
     },
-    "templateVersion": 1,
     "authors": [
       {
         "name": "Vharung",
@@ -111,12 +110,13 @@
       }
     ],
     "background": "systems/tailofequestria/assets/accueil.jpg",
-    "gridDistance": 1,
-    "gridUnits": "m",
+    "grid":{
+      "distance":1,
+      "units":"m"
+    },
     "primaryTokenAttribute": "stamina",
     "url": "",
     "manifest": "",
     "download": "https://github.com/Vharung/tailofequestria",
-    "license": "LICENSE.txt",
-    "relationships.requires":""
+    "license": "LICENSE.txt"
 }

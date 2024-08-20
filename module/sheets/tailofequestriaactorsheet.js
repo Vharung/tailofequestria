@@ -4,7 +4,7 @@
  */
  export class tailofequestriaActorSheet extends ActorSheet {
     static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
+        return foundry.utils.mergeObject(super.defaultOptions, {
           classes: ["tailofequestria", "sheet", "actor"],
           width: 1000,
           height: 640,
@@ -115,11 +115,10 @@
     }
 
     //lancer de dés
-    _onRoll(event){
+    async _onRoll(event){
         let monJetDeDes = event.target.dataset["dice"];
         let nbdes = event.target.dataset["attdice"];
         const name = event.target.dataset["name"];
-        const trait = event.target.dataset["trait"];
         const body =this.actor.system.body;
         const mind =this.actor.system.mind;
         const charm =this.actor.system.charm;
@@ -129,18 +128,15 @@
         var listdes=['D4','D6','D8','D10','D12','D20','D20 + 1D4','D20 + 1D6','D20 + 1D8','D20 + D10','D20 + D12','2D20','2D20 + 1D6','2D20 + 1D8','2D20 + D10','2D20 + D12','3D20']
         var adddice="";
         var modif=0;
-        if(trait=="body" || trait=="corps"){
+        
+        if(name=="Corps"){
             adddice='+ 1'+body;
-        }else if(trait=="mind" || trait=="esprit"){
-            adddice='+ 1'+mind;
-        }else if(trait=="charm" || trait=="charme"){
-            adddice='+ 1'+charm;
-        }
-        if(name=="Corps" || trait=="body" || trait=="corps"){
             modif=modifbody;
-        }else if(name=="Esprit" || trait=="mind" || trait=="esprit"){
+        }else if(name=="Esprit"){
+            adddice='+ 1'+mind;
             modif=modifmind;
-        }else if(name=="Charme" || trait=="charm" || trait=="charme"){
+        }else if(name=="Charme"){
+            adddice='+ 1'+charm;
             modif=modifcharm;
         }
         if(modif!=0){
@@ -159,24 +155,12 @@
             nbdes=listdes[nblist];
         }
         const jetdeDesFormule = "1"+nbdes + adddice;
-        console.log(nbdes+' '+name+" "+jetdeDesFormule+" "+trait+" "+adddice);
 
-        let r = new Roll(nbdes + adddice);
-        var roll=r.evaluate({"async": false});
+        let r = await new Roll(nbdes + adddice).evaluate();
         let retour=r.result; 
         var succes="";
-
         const myArray = nbdes.split("D");
         let numdes = myArray[1];
-        /*if(retour>95){
-            succes="<h4 class='result' style='background:#ff3333;text-align: center;color: #fff;padding: 5px;border: 1px solid #999;'>Echec critique</h4>";
-        }else if(retour<critique){
-            succes="<h4 class='result' style='background:#7dff33;text-align: center;color: #fff;padding: 5px;border: 1px solid #999;'>Réussite critique</h4>";
-        }else if(retour<=inforesult){
-            succes="<h4 class='result' style='background:#78be50;text-align: center;color: #fff;padding: 5px;border: 1px solid #999;'>Réussite</h4>";
-        }else{
-            succes="<h4 class='result' style='background:#ff5733;text-align: center;color: #fff;padding: 5px;border: 1px solid #999;'>Echec</h4>";
-        }*/
         if(retour==1){
             succes="<h4 class='result' style='background:#ff3333;text-align: center;color: #fff;padding: 5px;border: 1px solid #999;'>Echec critique</h4>";
         }else if(retour==numdes){
@@ -185,9 +169,12 @@
         console.log(succes);
         const texte = "Jet de " + name + " : " +jetdeDesFormule +succes;
         //roll.roll().toMessage({
-        roll.toMessage({
-            speaker: ChatMessage.getSpeaker({ actor: this }),
-            flavor: texte
-        });
+        if (r && texte) {
+            await r.toMessage({
+                user: game.user._id,
+            speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+            content: texte
+            });
+        }
     }
 }
